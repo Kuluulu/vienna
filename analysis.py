@@ -76,3 +76,52 @@ for country in countries:
     plt.close()
 
     print(f"Saved plot for {country} to {filename}")
+
+
+### Plot both countries in one
+
+
+# Extract data
+co2_data = {country: extract_series(co2, country) for country in countries}
+life_data = {country: extract_series(life_exp, country) for country in countries}
+gdp_data = {country: extract_series(gdp, country) for country in countries}
+
+# A4 page size (portrait) in inches
+A4_SIZE = (8.27, 11.69)
+
+# Create a single figure with 3 vertical subplots
+fig, axs = plt.subplots(3, 1, figsize=A4_SIZE, sharex=True)
+
+
+# # Plot CO₂
+axs[0].set_title("CO₂ Emissions Per Capita (Metric Tons)", fontsize=12)
+for country, series in co2_data.items():
+    axs[0].plot(series.index, series.values, label=country, linewidth=2)
+axs[0].set_ylabel("CO₂ (tons)", fontsize=10)
+axs[0].legend(fontsize=8)
+axs[0].grid(True, linestyle='--', alpha=0.7)
+
+# Plot Life Expectancy
+axs[1].set_title("Life Expectancy at Birth (Years)", fontsize=12)
+for country, series in life_data.items():
+    axs[1].plot(series.index, series.values, label=country, linewidth=2)
+axs[1].set_ylabel("Years", fontsize=10)
+axs[1].legend(fontsize=8)
+axs[1].grid(True, linestyle='--', alpha=0.7)
+
+# Plot GDP
+axs[2].set_title("GDP Per Capita (Current US$)", fontsize=12)
+for country, series in gdp_data.items():
+    axs[2].plot(series.index, series.values, label=country, linewidth=2)
+axs[2].set_xlabel("Year", fontsize=10)
+axs[2].set_ylabel("GDP (US$)", fontsize=10)
+axs[2].legend(fontsize=8)
+axs[2].grid(True, linestyle='--', alpha=0.7)
+
+# Final adjustments and save
+plt.tight_layout()
+pdf_path = os.path.join(output_dir, "A4_country_comparison.pdf")
+fig.savefig(pdf_path, dpi=300)
+plt.close(fig)
+
+print(f"✅ Saved single A4 page with all plots to: {pdf_path}")
