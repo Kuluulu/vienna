@@ -1,5 +1,7 @@
 # Method
 
+The repository is available under [Link to Repository](https://github.com/Kuluulu/vienna).
+
 ### 1. Git Repository and Virtual Python Environment Generation
 
 Set up of a GitHub repository and a local virtual environment for reproducibility and to ensure all relevant packages are available. Run the following **environment.sh** in a Virtual Studio Code Terminal (some steps are only necessary on macOS which is the operating system I am using). 
@@ -7,10 +9,7 @@ Set up of a GitHub repository and a local virtual environment for reproducibilit
 ``` shell
 #!/bin/sh
 
-# Install system dependencies first (before building Python)
-brew install openssl@3 readline sqlite3 xz zlib tcl-tk
-
-# Install Python (must be *after* brew and export)
+# Install Python
 echo "Install Python:"
 pyenv install 3.11.13
 
@@ -18,7 +17,7 @@ pyenv install 3.11.13
 pyenv global 3.11.13
 ```
 
-I then run 
+Then run 
 ```shell
 # Create and activate virtual environment
 python3 -m venv .venv
@@ -28,15 +27,13 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install pandas matplotlib
 ```
-inside the VS Code Terminal to create the virtual environment.
+inside the VS Code Terminal to create the virtual environment to work in.
 
 ### 2. Data Access 
 
-I tried to use the Python library ``wbdata`` to automate the access to the required World Bank datasets, but the library requires an OpenSSL version that I could not successfully install on my system.
+After some attempts to use the Python library ``wbdata`` to automate accessing the required World Bank datasets (the library requires an OpenSSL version that I could not successfully access through the python installation on my system), I resorted to downloading the datasets manually from [https://databank.worldbank.org/source/](https://databank.worldbank.org/source/) on July 27, 2025.
 
-Therefore, I resorted to downloading the datasets manually from https://databank.worldbank.org/source/ on July 27, 2025.
-
-ChatGPT lead me to the databases 'World Development Indicators' and 'Environment' where I was able to download the required parameters as comma-separated values (CSVs) including the associated metadata. The files were added to the input folder.
+OpenAI's ChatGPT quickly leads to the relevant databases, namely 'World Development Indicators' and 'Environment', which I downloaded the required parameters of as comma-separated values (CSVs). The files, including the associated metadata, were added to the repository input folder.
 
 The GDP per capita data was available with different currency options. I selected the "current US$" option, which introduces uncertainty associated to currency exchange but enables direct comparison of the two countries.
 
@@ -44,3 +41,6 @@ The GDP per capita data was available with different currency options. I selecte
 
 Create an ``analysis.py`` python file that imports the World Bank data and plots it. Run this using ``python analysis.py``. Files are written to an ``output`` folder.
 
+### 4. Discussion
+
+Write ``discussion.md`` and convert Markdown file into PDF using the VS Code extension "Markdown PDF".
