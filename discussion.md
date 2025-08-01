@@ -14,7 +14,9 @@ First, one noticeable pattern is that although GDP per capita and life expectanc
 
 #### Life expectancy
 
-While the Democratic Republic of Congo has seen a constant increase in life expectancy at birth, increasing from 41 to 62 years (which averages to one third of a year per calendar year), Burundi's life expectancy development was less monotonic. Associated to the 1972 Ikiza mass killings (often characterised as a genocide)[^1] and the 1993 ethnic violence following the conflicts between Tutsi and Hutu[^2], there are big dents in the otherwise increasing life expectancy curve. In the 1970s, the life expectancy decreased from around 43 years to 26 years and in the 1990s the life expectancy decreased from about 45 years to 37 years.
+The Democratic Republic of Congo has seen a constant increase in life expectancy at birth, increasing from 41 to 62 years (which averages to one third of a year per calendar year). There were disruptions during the 1990s though.
+
+Burundi's life expectancy development was less monotonic. Associated to the 1972 Ikiza mass killings (often characterised as a genocide)[^1] and the 1993 ethnic violence following the conflicts between Tutsi and Hutu[^2], there are big dents in the otherwise increasing life expectancy curve. In the 1970s, the life expectancy decreased from around 43 years to 26 years and in the 1990s the life expectancy decreased from about 45 years to 37 years.
 
 [^1]: https://en.wikipedia.org/wiki/Ikiza
 [^2]: https://en.wikipedia.org/wiki/1993_ethnic_violence_in_Burundi
@@ -37,11 +39,18 @@ The DR Congo tripled its GDP per capita between the 1960s and the mid 1970s from
 
 Burundi's GDP per capita more than doubled from around 80 USD in the 1960s to about 200 USD in the 2020s. It seems to slightly correlate with the DR Congo's GDP per capita.
 
+### Key Finding I
+In both Burundi and DR COngo has the life expectancy been increasing in the past 65 years, but it has also been significantly affected and limited by armed conflict.
+
+### Key Finding II
+DR Congo has managed to rebuild their exonomy after conflict while decreasing their carbon emissions per capita. Burundi has not.
+
+
 ### Follow-up Thoughts
 
-Further work would need to go into investigating the methods that were used to generate the World Bank data and to research whether there is information on the associated uncertainties of the data. Also, it needs to be clarified how the World Bank defines the so-called "current" US-Dollar and whether selecting a different option might be more suitable.
+Further work would need to go into investigating the methods that were used to generate the World Bank data and to research whether there is information on the associated uncertainties of the data. Also, it needs to be clarified how the World Bank defines the so-called "current" US-Dollar and whether selecting a different option might be more suitable. Comparing to potential local datasets might also be insightful.
 
-Also, it would be interesting to consider the population development in the same time frame as per capita values might be misleading if the underlying numbers of people have changed significantly. The mass killings in Burundi suggest this.
+Also, it would be interesting to consider the population development in the same time frame as per capita values might be misleading if the underlying numbers of people have changed significantly. The mass killings in Burundi suggest this. 
 
 The Dem. Rep. of Congo's decrease in CO2 emissions during an increasing GDP per capita invites the question of what drives these numbers, e.g. whether low-CO2 emission sectors are thriving, if the total population has changed drastically, and how this relates to education levels of the population.
 
@@ -51,6 +60,8 @@ The Dem. Rep. of Congo's decrease in CO2 emissions during an increasing GDP per 
 How I would present the information, would depend on my audience. If I'd present in front of a non-African working unit, I would show the figures in a few slides, point out the observations above, give details and historical context.
 
 If I were to present in front of an African audience, I would first consult with locals, if possible, on what is relevant to them, where the needs for information are, and how much context is needed.
+
+Generally, I would ensure to work with local partners to avoid "parachute science".
 
 ### Long-Term Usability
 
